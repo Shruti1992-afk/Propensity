@@ -8,19 +8,19 @@ import streamlit as st
 uploaded_file = st.file_uploader("Choose a CSV file")
 
 if uploaded_file is not None:
-    # Read the uploaded file using pandas
-    data = pd.read_excel(uploaded_file)
+  # Read the uploaded file using pandas
+  data = pd.read_excel(uploaded_file)
 
-    # Rest of your code to process and analyze the data
+  # Define categorical features (including Product Display Page Visit)
+  categorical_cols = ['Last mobile purchased', 'Last Visual Display purchased',
+                     'Last Refrigrator purchased', 'Most used Application on phone',
+                     'Product Display Page Visit', 'Abandoned cart','Hobbies',
+                     'SmartThing App Installed']
 
+  # ... rest of your feature encoding and model building code
 
-# Define categorical features (including Product Display Page Visit)
-categorical_cols = ['Last mobile purchased', 'Last Visual Display purchased', 
-                   'Last Refrigrator purchased', 'Most used Application on phone',
-                   'Product Display Page Visit', 'Abandoned cart','Hobbies',
-                   'SmartThing App Installed']
-
-
+else:
+  st.write("Please upload a CSV file to proceed.")
 mobile_options = ["S22", "Fold6"]
 visual_display_options = ["Q55", "Neo QLED85", "UHD43"]
 refrigerator_options = ["Bespoke", "French door", "Single door", "Double door"]
