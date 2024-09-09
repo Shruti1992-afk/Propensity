@@ -4,8 +4,15 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 import streamlit as st
 
-# Load data
-data = pd.read_excel(r"C:\Users\Admin\Downloads\Base data.xlsx")
+# Use st.file_uploader to allow users to upload the data file
+uploaded_file = st.file_uploader("Choose a CSV file")
+
+if uploaded_file is not None:
+    # Read the uploaded file using pandas
+    data = pd.read_excel(uploaded_file)
+
+    # Rest of your code to process and analyze the data
+
 
 # Define categorical features (including Product Display Page Visit)
 categorical_cols = ['Last mobile purchased', 'Last Visual Display purchased', 
