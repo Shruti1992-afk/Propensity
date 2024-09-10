@@ -18,9 +18,6 @@ if uploaded_file is not None:
                      'SmartThing App Installed']
 
   # ... rest of your feature encoding and model building code
-
-else:
-  st.write("Please upload a CSV file to proceed.")
 mobile_options = ["S22", "Fold6"]
 visual_display_options = ["Q55", "Neo QLED85", "UHD43"]
 refrigerator_options = ["Bespoke", "French door", "Single door", "Double door"]
