@@ -93,7 +93,7 @@ def main():
     prediction = model.predict_proba(df_user_input)[0]
 
     # Display predicted probabilities
-    st.write("Probability of using Product 1:", prediction[0])
+    st.write("Probability of MX purchase:", prediction[0])
 
 if __name__ == "__main__":
   main()
